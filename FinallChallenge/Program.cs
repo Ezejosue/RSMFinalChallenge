@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -18,6 +17,8 @@ builder.Services.AddDbContext<AdvWorksDbContext>(options =>
         opt => opt.MigrationsAssembly(typeof(AdvWorksDbContext).Assembly.FullName));
 });
 
+/* This code snippet is configuring CORS (Cross-Origin Resource Sharing) in an ASP.NET Core
+application. */
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
@@ -28,6 +29,8 @@ builder.Services.AddCors(options =>
 });
 
 
+/* These lines of code are registering dependencies in the dependency injection container of the
+ASP.NET Core application. */
 builder.Services.AddTransient<ISaleRepository, SaleRepository>();
 builder.Services.AddTransient<ISaleService, SaleReportService>();
 builder.Services.AddTransient<ISaleByEmployeeRepository, SaleByEmployeeRepository>();

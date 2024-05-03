@@ -18,7 +18,7 @@
         public DbSet<SaleReport> SalesReports { get; set; }
         public DbSet<SaleByEmployee> SalesByEmployees { get; set; }
         public DbSet<ProductCategory> Products { get; set; }
-        public DbSet<SaleTerritory> SalesTerritories { get; set; }
+        public DbSet<SalesTerritory> SalesTerritories { get; set; }
 
        
 

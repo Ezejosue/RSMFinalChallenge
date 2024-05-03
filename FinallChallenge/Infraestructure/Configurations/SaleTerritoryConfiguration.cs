@@ -4,13 +4,24 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FinallChallenge.Infraestructure.Configurations
 {
-    public class SaleTerritoryConfiguration : IEntityTypeConfiguration<SaleTerritory>
+    /// <summary>
+    /// Configuration for the SalesTerritory entity.
+    /// </summary>
+    public class SaleTerritoryConfiguration : IEntityTypeConfiguration<SalesTerritory>
     {
-        public void Configure(EntityTypeBuilder<SaleTerritory> builder)
+        /// <summary>
+        /// Configures the SalesTerritory entity.
+        /// </summary>
+        /// <param name="builder">The entity type builder used to configure the entity.</param>
+        public void Configure(EntityTypeBuilder<SalesTerritory> builder)
         {
-            builder.ToTable(nameof(SaleTerritory), "Sales");
+            // Table name and schema
+            builder.ToTable(nameof(SalesTerritory), "Sales");
 
+            // Primary key
             builder.HasKey(e => e.TerritoryID);
+
+            // Column mappings
             builder.Property(e => e.TerritoryID).HasColumnName("TerritoryID");
             builder.Property(e => e.Name).IsRequired();
         }

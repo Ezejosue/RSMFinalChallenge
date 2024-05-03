@@ -1,9 +1,9 @@
-﻿namespace FinallChallenge.DTOs
+﻿namespace FinallChallenge.Domain.Models
 {
     /// <summary>
-    /// Data transfer object for sales territories.
+    /// Represents a sales territory.
     /// </summary>
-    public class GetSaleTerritoryDto
+    public class SalesTerritory
     {
         /// <summary>
         /// Gets or sets the ID of the sales territory.
