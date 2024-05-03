@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Infraestructure.Repositories
 {
-    public class ProductCateRepository : IProductsCateRepository
+    public class ProductCateRepository : IProductCateRepository
     {
         private readonly AdvWorksDbContext _context;
 

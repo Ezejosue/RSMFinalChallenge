@@ -5,16 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Infraestructure.Repositories
 {
-    public class SalesByEmployeeRepository : ISalesByEmployeeRepository
+    public class SaleByEmployeeRepository : ISaleByEmployeeRepository
     {
         private readonly AdvWorksDbContext _context;
 
-        public SalesByEmployeeRepository(AdvWorksDbContext context)
+        public SaleByEmployeeRepository(AdvWorksDbContext context)
         {
             _context = context;
         }
 
-        public async Task<List<SalesByEmployee>> GetSalesByEmployee(string? startDate, string? endDate, string? employee, string? product, int? page, int? pageSize)
+        public async Task<List<SaleByEmployee>> GetSalesByEmployee(string? startDate, string? endDate, string? employee, string? product, int? page, int? pageSize)
         {
             var startDateParam = new SqlParameter("@StartDate", startDate ?? (object)DBNull.Value);
             var endDateParam = new SqlParameter("@EndDate", endDate ?? (object)DBNull.Value);
@@ -24,7 +24,7 @@ namespace FinallChallenge.Infraestructure.Repositories
             var pageSizeParam = new SqlParameter("@PageSize", pageSize ?? (object)DBNull.Value);
 
 
-            return await _context.Set<SalesByEmployee>()
+            return await _context.Set<SaleByEmployee>()
                 .FromSqlRaw("EXEC SalesByEmployee @StartDate, @EndDate, @Employee, @Product, @PageNumber, @PageSize", 
                 startDateParam, endDateParam, employeeParam, productParam, pageNumberParam, pageSizeParam)
                 .ToListAsync();

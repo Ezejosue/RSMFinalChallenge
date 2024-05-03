@@ -1,6 +1,6 @@
 ﻿namespace FinallChallenge.Domain.Models
 {
-    public class SalesReport
+    public class SaleReport
     {
         public string? ProductName { get; set; }
         public string? ProductCategory { get; set; }

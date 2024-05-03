@@ -3,8 +3,8 @@ using FinallChallenge.DTOs;
 
 namespace FinallChallenge.Domain.Interfaces
 {
-    public interface ISalesTerritoryService
+    public interface ISaleTerritoryService
     {
-        Task<IEnumerable<GetSalesTerritory>> GetSalesTerritories();
+        Task<IEnumerable<GetSaleTerritoryDto>> GetSalesTerritories();
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FinallChallenge.Domain.Models
 {
-    public class SalesByEmployee
+    public class SaleByEmployee
     {
         public string? EmployeeName { get; set; }
         public string? CategoryName { get; set; }

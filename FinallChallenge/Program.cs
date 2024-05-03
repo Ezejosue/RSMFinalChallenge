@@ -28,14 +28,14 @@ builder.Services.AddCors(options =>
 });
 
 
-builder.Services.AddTransient<ISalesRepository, SalesRepository>();
-builder.Services.AddTransient<ISalesService, SaleReportService>();
-builder.Services.AddTransient<ISalesByEmployeeRepository, SalesByEmployeeRepository>();
-builder.Services.AddTransient<ISalesByEmployeeService, SalesByEmployeeService>();
-builder.Services.AddTransient<IProductsCateRepository, ProductCateRepository>();
-builder.Services.AddTransient<IProductsCateService, ProductCateService>();
-builder.Services.AddTransient<ISalesTerritoryRepository, SalesTerritoryRepository>();
-builder.Services.AddTransient<ISalesTerritoryService, SalesTerritoryService>();
+builder.Services.AddTransient<ISaleRepository, SaleRepository>();
+builder.Services.AddTransient<ISaleService, SaleReportService>();
+builder.Services.AddTransient<ISaleByEmployeeRepository, SaleByEmployeeRepository>();
+builder.Services.AddTransient<ISaleByEmployeeService, SaleByEmployeeService>();
+builder.Services.AddTransient<IProductCateRepository, ProductCateRepository>();
+builder.Services.AddTransient<IProductCateService, ProductCateService>();
+builder.Services.AddTransient<ISaleTerritoryRepository, SaleTerritoryRepository>();
+builder.Services.AddTransient<ISaleTerritoryService, SaleTerritoryService>();
 
 var app = builder.Build();
 

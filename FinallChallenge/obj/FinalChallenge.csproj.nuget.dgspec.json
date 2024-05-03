@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinallChallenge.csproj": {}
+    "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinalChallenge.csproj": {}
   },
   "projects": {
-    "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinallChallenge.csproj": {
+    "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinalChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinallChallenge.csproj",
-        "projectName": "FinallChallenge",
-        "projectPath": "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinallChallenge.csproj",
+        "projectUniqueName": "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinalChallenge.csproj",
+        "projectName": "FinalChallenge",
+        "projectPath": "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\FinalChallenge.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "E:\\Proyectos\\RSMFinalChallenge\\FinallChallenge\\obj\\",
         "projectStyle": "PackageReference",

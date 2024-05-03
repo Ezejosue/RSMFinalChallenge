@@ -8,9 +8,9 @@ namespace FinallChallenge.Controllers
     [ApiController]
     public class ProductCateController : ControllerBase
     {
-        private readonly IProductsCateService _productsCateService;
+        private readonly IProductCateService _productsCateService;
 
-        public ProductCateController(IProductsCateService productsCateService)
+        public ProductCateController(IProductCateService productsCateService)
         {
             _productsCateService = productsCateService;
         }

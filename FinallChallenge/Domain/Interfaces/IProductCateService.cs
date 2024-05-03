@@ -3,7 +3,7 @@ using FinallChallenge.DTOs;
 
 namespace FinallChallenge.Domain.Interfaces
 {
-    public interface IProductsCateService
+    public interface IProductCateService
     {
         Task<IEnumerable<GetProductCateDto>> GetProducts();
     }

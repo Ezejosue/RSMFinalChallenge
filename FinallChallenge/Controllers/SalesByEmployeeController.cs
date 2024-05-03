@@ -5,11 +5,11 @@ namespace FinallChallenge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GetSalesByEmployeeController : ControllerBase
+    public class SalesByEmployeeController : ControllerBase
     {
-        private readonly ISalesByEmployeeService _salesByEmployeeService;
+        private readonly ISaleByEmployeeService _salesByEmployeeService;
 
-        public GetSalesByEmployeeController(ISalesByEmployeeService service)
+        public SalesByEmployeeController(ISaleByEmployeeService service)
         {
             _salesByEmployeeService = service;
         }

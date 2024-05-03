@@ -5,16 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Infraestructure.Repositories
 {
-    public class SalesRepository : ISalesRepository
+    public class SaleRepository : ISaleRepository
     {
         private readonly AdvWorksDbContext _context;
 
-        public SalesRepository(AdvWorksDbContext context)
+        public SaleRepository(AdvWorksDbContext context)
         {
             _context = context;
         }
 
-        public async Task<List<SalesReport>> GetSalesDataByFilterAsync(string categoryFilter, string? regionFilter, string? StartDate, string? EndDate, int? page, int? pageSize)
+        public async Task<List<SaleReport>> GetSalesDataByFilterAsync(string categoryFilter, string? regionFilter, string? StartDate, string? EndDate, int? page, int? pageSize)
         {
             var categoryParam = new SqlParameter("@CategoryFilter", categoryFilter ?? (object)DBNull.Value);
             var regionParam = new SqlParameter("@RegionFilter", regionFilter ?? (object)DBNull.Value);
@@ -23,7 +23,7 @@ namespace FinallChallenge.Infraestructure.Repositories
             var pageNumberParam = new SqlParameter("@PageNumber", page ?? (object)DBNull.Value);
             var pageSizeParam = new SqlParameter("@PageSize", pageSize ?? (object)DBNull.Value);
 
-            return await _context.Set<SalesReport>()
+            return await _context.Set<SaleReport>()
              .FromSqlRaw("EXEC GetSalesDataByFilter @CategoryFilter, @RegionFilter, @StartDate, @EndDate, @PageNumber, @PageSize",
                  categoryParam, regionParam, StartDateParam, EndDateParam, pageNumberParam, pageSizeParam)
              .ToListAsync();

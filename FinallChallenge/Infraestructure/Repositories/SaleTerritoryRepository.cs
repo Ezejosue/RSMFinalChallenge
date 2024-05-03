@@ -4,19 +4,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Infraestructure.Repositories
 {
-    public class SalesTerritoryRepository : ISalesTerritoryRepository
+    public class SaleTerritoryRepository : ISaleTerritoryRepository
     {
         private readonly AdvWorksDbContext _context;
 
-        public SalesTerritoryRepository(AdvWorksDbContext context)
+        public SaleTerritoryRepository(AdvWorksDbContext context)
         {
             _context = context;
         }
 
-        public async Task<IEnumerable<SalesTerritory>> GetSalesTerritories()
+        public async Task<IEnumerable<SaleTerritory>> GetSalesTerritories()
         {
 
-            return await _context.Set<SalesTerritory>().AsNoTracking().ToListAsync();
+            return await _context.Set<SaleTerritory>().AsNoTracking().ToListAsync();
         }
     }
 }

@@ -6,23 +6,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Services
 {
-    public class SalesTerritoryService : ISalesTerritoryService
+    public class SaleTerritoryService : ISaleTerritoryService
     {
-        private readonly ISalesTerritoryRepository _service;
+        private readonly ISaleTerritoryRepository _service;
 
-        public SalesTerritoryService(ISalesTerritoryRepository service)
+        public SaleTerritoryService(ISaleTerritoryRepository service)
         {
             _service = service;
         }
 
-        public async Task<IEnumerable<GetSalesTerritory>> GetSalesTerritories()
+        public async Task<IEnumerable<GetSaleTerritoryDto>> GetSalesTerritories()
         {
             var SalesTerritories = await _service.GetSalesTerritories();
-            List<GetSalesTerritory> salesTerritories = new();
+            List<GetSaleTerritoryDto> salesTerritories = new();
 
             foreach (var SaleTerritory in SalesTerritories)
             {
-                GetSalesTerritory dto = new()
+                GetSaleTerritoryDto dto = new()
                 {
                     TerritoryID = SaleTerritory.TerritoryID,
                     Name = SaleTerritory.Name

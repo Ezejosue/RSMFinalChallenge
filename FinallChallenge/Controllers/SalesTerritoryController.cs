@@ -8,9 +8,9 @@ namespace FinallChallenge.Controllers
     [ApiController]
     public class SalesTerritoryController : ControllerBase
     {
-        private readonly ISalesTerritoryService _SalesTerritoryService;
+        private readonly ISaleTerritoryService _SalesTerritoryService;
 
-        public SalesTerritoryController(ISalesTerritoryService salesTerritoryService)
+        public SalesTerritoryController(ISaleTerritoryService salesTerritoryService)
         {
             _SalesTerritoryService = salesTerritoryService;
         }

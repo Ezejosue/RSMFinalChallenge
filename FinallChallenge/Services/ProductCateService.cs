@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Services
 {
-    public class ProductCateService : IProductsCateService
+    public class ProductCateService : IProductCateService
     {
-        private readonly IProductsCateRepository _service;
+        private readonly IProductCateRepository _service;
 
-        public ProductCateService(IProductsCateRepository service)
+        public ProductCateService(IProductCateRepository service)
         {
             _service = service;
         }

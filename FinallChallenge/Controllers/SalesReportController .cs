@@ -8,11 +8,11 @@ namespace FinallChallenge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SalesReportsController: ControllerBase
+    public class SalesReportController: ControllerBase
     {
-        private readonly ISalesService _salesreport;
+        private readonly ISaleService _salesreport;
 
-        public SalesReportsController(ISalesService salesreport)
+        public SalesReportController(ISaleService salesreport)
         {
             _salesreport = salesreport;
         }

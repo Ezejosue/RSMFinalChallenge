@@ -2,7 +2,7 @@
 
 namespace FinallChallenge.Domain.Interfaces
 {
-    public interface IProductsCateRepository
+    public interface IProductCateRepository
     {
         Task<IEnumerable<ProductCategory>> GetProducts();
     }
