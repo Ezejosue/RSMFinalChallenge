@@ -1,6 +1,5 @@
 ﻿using FinallChallenge.Domain.Interfaces;
 using FinallChallenge.Domain.Models;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Infraestructure.Repositories

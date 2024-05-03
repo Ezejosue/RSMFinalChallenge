@@ -1,8 +1,5 @@
 ﻿using FinallChallenge.Domain.Interfaces;
-using FinallChallenge.Domain.Models;
-using FinallChallenge.Infraestructure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Controllers
 {

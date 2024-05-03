@@ -1,10 +1,7 @@
 ﻿namespace FinallChallenge.Infraestructure
 {
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
     using System.Reflection;
     using FinallChallenge.Domain.Models;
-    using Microsoft.Data.SqlClient;
     using Microsoft.EntityFrameworkCore;
 
     public class AdvWorksDbContext : DbContext

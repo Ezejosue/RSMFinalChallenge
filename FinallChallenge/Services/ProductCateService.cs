@@ -1,8 +1,5 @@
 ﻿using FinallChallenge.Domain.Interfaces;
-using FinallChallenge.Domain.Models;
 using FinallChallenge.DTOs;
-using FinallChallenge.Infraestructure.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace FinallChallenge.Services
 {

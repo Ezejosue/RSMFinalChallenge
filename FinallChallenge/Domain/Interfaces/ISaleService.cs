@@ -1,5 +1,4 @@
 ﻿using FinallChallenge.Domain.Models;
-using Microsoft.Data.SqlClient;
 
 namespace FinallChallenge.Domain.Interfaces
 {

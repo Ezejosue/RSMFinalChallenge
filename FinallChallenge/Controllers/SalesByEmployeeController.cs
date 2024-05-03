@@ -15,7 +15,7 @@ namespace FinallChallenge.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetSalesByeEmployeeAsync([FromQuery] string? startDate, [FromQuery] string? endDate, [FromQuery] string? employee, [FromQuery] string? product, int? page, int? pageSize) 
+        public async Task<IActionResult> GetSalesByEmployeeAsync([FromQuery] string? startDate, [FromQuery] string? endDate, [FromQuery] string? employee, [FromQuery] string? product, [FromQuery] int? page, [FromQuery] int? pageSize) 
         {
             try
             {

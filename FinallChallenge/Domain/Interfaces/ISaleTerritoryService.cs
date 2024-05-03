@@ -1,4 +1,3 @@
-using FinallChallenge.Domain.Models;
 using FinallChallenge.DTOs;
 
 namespace FinallChallenge.Domain.Interfaces

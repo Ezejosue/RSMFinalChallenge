@@ -1,5 +1,4 @@
 ﻿using FinallChallenge.Domain.Interfaces;
-using FinallChallenge.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinallChallenge.Controllers
