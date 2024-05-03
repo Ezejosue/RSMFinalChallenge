@@ -1,0 +1,9 @@
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.form-floating {
+  flex: 1;
+  margin-right: 10px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinalChallenge</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">RSMFinal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/report2.html">Report 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>
+                Sales By Quarter Year
+            </h1>
+            <div class="d-flex">
+                <button type="button" class="btn btn-primary generate-report" onclick="fetchData()">
+                    Generate Report
+                </button>
+                <div class="dropdown mx-2">
+                    <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Download As
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item btn-pdf" href="#">PDF</a></li>
+                        <li><a class="dropdown-item btn-csv" href="#">CSV</a></li>
+                    </ul>
+                </div>
+                <div class="pagination-controls">
+                    <div class="pagination-controls">
+                        <button onclick="previousPage()" class="btn btn-secondary">Previous</button>
+                        <button onclick="nextPage()" class="btn btn-secondary">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="input-container my-3">
+                <div class="form-floating">
+                    <select class="form-control" id="categoryName">
+                        <option value="">Select Category</option>
+                    </select>
+                    <label for="categoryName">Category Name</label>
+                </div>
+                <div class="form-floating">
+                    <select class="form-control" id="territoryName">
+                        <option value="">Select Territory</option>
+                    </select>
+                    <label for="territoryName">Territory Name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="startDate" placeholder="Start Date">
+                    <label for="startDate">Start Date</label>
+                </div>
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="endDate" placeholder="End Date">
+                    <label for="endDate">End Date</label>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="container">
+        <div class="border mx-auto my-auto">
+            <div id="reportPreview">
+
+            </div>
+        </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="js/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="js/loadData/loadSelect.js"></script>
+
+    <script src="js/SalesReport.js"></script>
+    <script src="js/export/generatePDF.js"></script>
+    <script src="js/export/generateCSV.js"></script>
+
+
+</body>
+
+
+
+</html>
