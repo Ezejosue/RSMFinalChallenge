@@ -19,6 +19,10 @@ namespace FinallChallenge.Controllers
 
         // HTTP GET method to retrieve sales data filtered by various parameters.
         // This endpoint accepts optional query parameters for filtering the data.
+        /// <summary>
+        /// Gets all sales by employee
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetSalesByEmployeeAsync(
             [FromQuery] string? startDate, // Optional query parameter for the start date filter.

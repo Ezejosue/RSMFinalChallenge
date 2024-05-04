@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FinallChallenge</name>
+    </assembly>
+    <members>
+        <member name="M:FinallChallenge.Controllers.ProductCateController.GetProductsCategory">
+            <summary>
+            Gets all the product category names
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinallChallenge.Controllers.SalesByEmployeeController.GetSalesByEmployeeAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets all sales by employee
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinallChallenge.Controllers.SalesReportController.GetSalesData(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets all sales 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinallChallenge.Controllers.SalesTerritoryController.GetSalesTerritories">
+            <summary>
+            Gets the name of all territories    
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FinallChallenge.Domain.Interfaces.ISaleByEmployeeService">
+            <summary>
+            Interface for retrieving sales data by employee.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Domain.Interfaces.ISaleByEmployeeService.GetSalesByEmployee(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data filtered by specified parameters.
+            </summary>
+            <param name="startDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="endDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="employee">Optional parameter specifying the name of the employee for whom sales data is to be retrieved.</param>
+            <param name="product">Optional parameter specifying the name of the product for which sales data is to be retrieved.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleByEmployee objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Domain.Interfaces.ISaleRepository">
+            <summary>
+            Interface for accessing sales data from a repository.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Domain.Interfaces.ISaleRepository.GetSalesDataByFilterAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data from the repository filtered by specified parameters.
+            </summary>
+            <param name="categoryFilter">The category by which to filter the sales data.</param>
+            <param name="regionFilter">Optional parameter specifying the region by which to filter the sales data.</param>
+            <param name="StartDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="EndDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleReport objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Domain.Interfaces.ISaleService">
+            <summary>
+            Interface for providing sales-related services.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Domain.Interfaces.ISaleService.GetSalesDataByFilterAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data filtered by specified parameters.
+            </summary>
+            <param name="categoryFilter">The category by which to filter the sales data.</param>
+            <param name="regionFilter">Optional parameter specifying the region by which to filter the sales data.</param>
+            <param name="StartDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="EndDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleReport objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Domain.Interfaces.ISaleTerritoryRepository">
+            <summary>
+            Interface for accessing sales territories from a repository.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Domain.Interfaces.ISaleTerritoryRepository.GetSalesTerritories">
+            <summary>
+            Retrieves sales territories from the repository.
+            </summary>
+            <returns>A task representing the asynchronous operation. The task result contains an enumerable collection of SalesTerritory objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Domain.Interfaces.ISaleTerritoryService">
+            <summary>
+            Interface for providing sales territory-related services.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Domain.Interfaces.ISaleTerritoryService.GetSalesTerritories">
+            <summary>
+            Retrieves sales territories.
+            </summary>
+            <returns>A task representing the asynchronous operation. The task result contains an enumerable collection of GetSaleTerritoryDto objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Domain.Models.ProductCategory">
+            <summary>
+            Represents a product category.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.ProductCategory.ProductCategoryID">
+            <summary>
+            Gets or sets the ID of the product category.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.ProductCategory.Name">
+            <summary>
+            Gets or sets the name of the product category.
+            </summary>
+        </member>
+        <member name="T:FinallChallenge.Domain.Models.SaleByEmployee">
+            <summary>
+            Represents sales data associated with an employee.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.EmployeeName">
+            <summary>
+            Gets or sets the name of the employee.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.CategoryName">
+            <summary>
+            Gets or sets the name of the product category.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.ProductName">
+            <summary>
+            Gets or sets the name of the product.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.SalesCount">
+            <summary>
+            Gets or sets the number of sales.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.AvgUnitPrice">
+            <summary>
+            Gets or sets the average unit price.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.TotalSales">
+            <summary>
+            Gets or sets the total sales amount.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.FirstSaleDate">
+            <summary>
+            Gets or sets the date of the first sale.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleByEmployee.LastSaleDate">
+            <summary>
+            Gets or sets the date of the last sale.
+            </summary>
+        </member>
+        <member name="T:FinallChallenge.Domain.Models.SaleReport">
+            <summary>
+            Represents a sales report.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleReport.ProductName">
+            <summary>
+            Gets or sets the name of the product.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleReport.ProductCategory">
+            <summary>
+            Gets or sets the category of the product.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleReport.TotalSales">
+            <summary>
+            Gets or sets the total sales amount.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleReport.PercentContributionByCategoryAndRegion">
+            <summary>
+            Gets or sets the percentage contribution by category and region.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleReport.PercentContributionByRegion">
+            <summary>
+            Gets or sets the percentage contribution by region.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SaleReport.OrderDate">
+            <summary>
+            Gets or sets the order date.
+            </summary>
+        </member>
+        <member name="T:FinallChallenge.Domain.Models.SalesTerritory">
+            <summary>
+            Represents a sales territory.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SalesTerritory.TerritoryID">
+            <summary>
+            Gets or sets the ID of the sales territory.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.Domain.Models.SalesTerritory.Name">
+            <summary>
+            Gets or sets the name of the sales territory.
+            </summary>
+        </member>
+        <member name="T:FinallChallenge.DTOs.GetProductCateDto">
+            <summary>
+            Data transfer object for product categories.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.DTOs.GetProductCateDto.ProductCategoryID">
+            <summary>
+            Gets or sets the ID of the product category.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.DTOs.GetProductCateDto.Name">
+            <summary>
+            Gets or sets the name of the product category.
+            </summary>
+        </member>
+        <member name="T:FinallChallenge.DTOs.GetSaleTerritoryDto">
+            <summary>
+            Data transfer object for sales territories.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.DTOs.GetSaleTerritoryDto.TerritoryID">
+            <summary>
+            Gets or sets the ID of the sales territory.
+            </summary>
+        </member>
+        <member name="P:FinallChallenge.DTOs.GetSaleTerritoryDto.Name">
+            <summary>
+            Gets or sets the name of the sales territory.
+            </summary>
+        </member>
+        <member name="T:FinallChallenge.Infraestructure.Configurations.ProductConfiguration">
+            <summary>
+            Configuration for the ProductCategory entity.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Configurations.ProductConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{FinallChallenge.Domain.Models.ProductCategory})">
+            <summary>
+            Configures the ProductCategory entity.
+            </summary>
+            <param name="builder">The entity type builder used to configure the entity.</param>
+        </member>
+        <member name="T:FinallChallenge.Infraestructure.Configurations.SaleTerritoryConfiguration">
+            <summary>
+            Configuration for the SalesTerritory entity.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Configurations.SaleTerritoryConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{FinallChallenge.Domain.Models.SalesTerritory})">
+            <summary>
+            Configures the SalesTerritory entity.
+            </summary>
+            <param name="builder">The entity type builder used to configure the entity.</param>
+        </member>
+        <member name="T:FinallChallenge.Infraestructure.Repositories.ProductCateRepository">
+            <summary>
+            Repository for accessing product categories.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.ProductCateRepository.#ctor(FinallChallenge.Infraestructure.AdvWorksDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Infraestructure.Repositories.ProductCateRepository"/> class.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.ProductCateRepository.GetProducts">
+            <summary>
+            Retrieves all product categories.
+            </summary>
+            <returns>A task representing the asynchronous operation. The task result contains an enumerable collection of ProductCategory objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Infraestructure.Repositories.SaleByEmployeeRepository">
+            <summary>
+            Repository for accessing sales data by employee.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.SaleByEmployeeRepository.#ctor(FinallChallenge.Infraestructure.AdvWorksDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Infraestructure.Repositories.SaleByEmployeeRepository"/> class.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.SaleByEmployeeRepository.GetSalesByEmployee(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data filtered by specified parameters.
+            </summary>
+            <param name="startDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="endDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="employee">Optional parameter specifying the name of the employee for whom sales data is to be retrieved.</param>
+            <param name="product">Optional parameter specifying the name of the product for which sales data is to be retrieved.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleByEmployee objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Infraestructure.Repositories.SaleRepository">
+            <summary>
+            Repository for accessing sales data.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.SaleRepository.#ctor(FinallChallenge.Infraestructure.AdvWorksDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Infraestructure.Repositories.SaleRepository"/> class.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.SaleRepository.GetSalesDataByFilterAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data filtered by specified parameters.
+            </summary>
+            <param name="categoryFilter">The category by which to filter the sales data.</param>
+            <param name="regionFilter">Optional parameter specifying the region by which to filter the sales data.</param>
+            <param name="StartDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="EndDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleReport objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Infraestructure.Repositories.SaleTerritoryRepository">
+            <summary>
+            Repository for accessing sales territories.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.SaleTerritoryRepository.#ctor(FinallChallenge.Infraestructure.AdvWorksDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Infraestructure.Repositories.SaleTerritoryRepository"/> class.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:FinallChallenge.Infraestructure.Repositories.SaleTerritoryRepository.GetSalesTerritories">
+            <summary>
+            Retrieves sales territories.
+            </summary>
+            <returns>A task representing the asynchronous operation. The task result contains an enumerable collection of SalesTerritory objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Services.ProductCateService">
+            <summary>
+            Service for managing product categories.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Services.ProductCateService.#ctor(FinallChallenge.Domain.Interfaces.IProductCateRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Services.ProductCateService"/> class.
+            </summary>
+            <param name="service">The product category repository.</param>
+        </member>
+        <member name="M:FinallChallenge.Services.ProductCateService.GetProducts">
+            <summary>
+            Retrieves product categories.
+            </summary>
+            <returns>A task representing the asynchronous operation. The task result contains an enumerable collection of GetProductCateDto objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Services.SaleByEmployeeService">
+            <summary>
+            Service for retrieving sales data by employee.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Services.SaleByEmployeeService.#ctor(FinallChallenge.Domain.Interfaces.ISaleByEmployeeRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Services.SaleByEmployeeService"/> class.
+            </summary>
+            <param name="salesByEmployeeRepository">The repository for accessing sales data by employee.</param>
+        </member>
+        <member name="M:FinallChallenge.Services.SaleByEmployeeService.GetSalesByEmployee(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data filtered by specified parameters.
+            </summary>
+            <param name="startDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="endDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="employee">Optional parameter specifying the name of the employee for whom sales data is to be retrieved.</param>
+            <param name="product">Optional parameter specifying the name of the product for which sales data is to be retrieved.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleByEmployee objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Services.SaleReportService">
+            <summary>
+            Service for retrieving sales data.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Services.SaleReportService.#ctor(FinallChallenge.Domain.Interfaces.ISaleRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Services.SaleReportService"/> class.
+            </summary>
+            <param name="repository">The repository for accessing sales data.</param>
+        </member>
+        <member name="M:FinallChallenge.Services.SaleReportService.GetSalesDataByFilterAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retrieves sales data filtered by specified parameters.
+            </summary>
+            <param name="categoryFilter">The category by which to filter the sales data.</param>
+            <param name="regionFilter">Optional parameter specifying the region by which to filter the sales data.</param>
+            <param name="StartDate">Optional parameter indicating the start date for filtering the sales data.</param>
+            <param name="EndDate">Optional parameter indicating the end date for filtering the sales data.</param>
+            <param name="page">Optional parameter indicating the page number for pagination.</param>
+            <param name="pageSize">Optional parameter specifying the number of items per page for pagination.</param>
+            <returns>A task representing the asynchronous operation. The task result contains a list of SaleReport objects.</returns>
+        </member>
+        <member name="T:FinallChallenge.Services.SaleTerritoryService">
+            <summary>
+            Service for managing sales territories.
+            </summary>
+        </member>
+        <member name="M:FinallChallenge.Services.SaleTerritoryService.#ctor(FinallChallenge.Domain.Interfaces.ISaleTerritoryRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinallChallenge.Services.SaleTerritoryService"/> class.
+            </summary>
+            <param name="service">The repository for accessing sales territories.</param>
+        </member>
+        <member name="M:FinallChallenge.Services.SaleTerritoryService.GetSalesTerritories">
+            <summary>
+            Retrieves sales territories.
+            </summary>
+            <returns>A task representing the asynchronous operation. The task result contains an enumerable collection of GetSaleTerritoryDto objects.</returns>
+        </member>
+    </members>
+</doc>

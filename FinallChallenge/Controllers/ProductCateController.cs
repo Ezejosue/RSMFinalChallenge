@@ -19,6 +19,10 @@ namespace FinallChallenge.Controllers
 
         // HTTP GET method to retrieve product categories.
         // Responds to 'GET api/ProductCate' requests.
+        /// <summary>
+        /// Gets all the product category names
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetProductsCategory()
         {

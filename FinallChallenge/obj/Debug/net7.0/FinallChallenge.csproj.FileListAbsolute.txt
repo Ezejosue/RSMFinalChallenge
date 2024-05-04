@@ -170,3 +170,5 @@ E:\Proyectos\RSMFinalChallenge\FinallChallenge\obj\Debug\net7.0\refint\FinallCha
 E:\Proyectos\RSMFinalChallenge\FinallChallenge\obj\Debug\net7.0\FinallChallenge.pdb
 E:\Proyectos\RSMFinalChallenge\FinallChallenge\obj\Debug\net7.0\FinallChallenge.genruntimeconfig.cache
 E:\Proyectos\RSMFinalChallenge\FinallChallenge\obj\Debug\net7.0\ref\FinallChallenge.dll
+E:\Proyectos\RSMFinalChallenge\FinallChallenge\bin\Debug\net7.0\FinallChallenge.xml
+E:\Proyectos\RSMFinalChallenge\FinallChallenge\obj\Debug\net7.0\FinallChallenge.xml

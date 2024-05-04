@@ -19,7 +19,7 @@ function fetchData(PageNumber = 1) {
   const endDate = document.getElementById("endDate").value;
 
   // Base URL for the API.
-  let url = "https://localhost:7099/api/GetSalesByEmployee?";
+  let url = "https://localhost:7099/api/SalesByEmployee?";
 
   // Accumulate URL parameters based on available filters.
   const params = [];

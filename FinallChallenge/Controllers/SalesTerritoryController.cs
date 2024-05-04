@@ -19,6 +19,10 @@ namespace FinallChallenge.Controllers
 
         // HTTP GET method to retrieve a list of all sales territories.
         // This endpoint responds to 'GET api/SalesTerritory' requests.
+        /// <summary>
+        /// Gets the name of all territories    
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetSalesTerritories()
         {

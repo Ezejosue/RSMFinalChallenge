@@ -19,6 +19,10 @@ namespace FinallChallenge.Controllers
 
         // HTTP GET method to retrieve sales report data.
         // This endpoint uses query parameters to filter sales data based on various criteria.
+        /// <summary>
+        /// Gets all sales 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetSalesData(
             [FromQuery] string categoryFilter,    // Required query parameter for category filter.
